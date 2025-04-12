@@ -1,3 +1,4 @@
+/* Global Font and Reset Styles */
 @font-face {
     font-family: 'tahoma';
     src: url('fonts/tahoma/Tahoma\ Regular\ font.ttf') format('woff2');
@@ -19,113 +20,140 @@
     font-family: "tahoma", sans-serif;
 }
 
-
+/* Color and Size Variables */
 :root {
-    --primary: #1db954;       /* Vivid Green - used for highlights, buttons */
-    --secondary: #121212;     /* Rich Black - background or main container */
-    --hover-black: #303030;
-    --accent: #0f0f0f;         /* Near Black - used for navbars or cards */
-    --text-primary: #e5e5e5;   /* Light Grey - main readable text */
-    --text-secondary: #b3b3b3; /* Subtle Grey - secondary text */
-    --highlight: #25d366;      /* Bright Lime Green - for hover, active states */
-    --border: #2a2a2a;         /* Muted dark border lines */
-    --hover: #1ed760;          /* Hover color variation of primary */
-    --background-alt: #181818; /* Alternate section background */
+    --first-color: #d3d6db;
+    --first-light: #e0e4e9;
+    --first-dark: #a0a7b2;
+    --second-color: #3a4750;
+    --second-light: #5a6772;
+    --second-dark: #2a353f;
+    --third-color: #303841;
+    --third-light: #4a5660;
+    --third-dark: #232a31;
+    --fourth-color: #be3144;
+    --fourth-light: #e25470;
+    --fourth-dark: #9c2533;
+    --primary: #3a4750;
+    --secondary: #303841;
+    --hover-black: #232a31;
+    --accent: #2a353f;
+    --text-primary: #e5e5e5;
+    --text-secondary: #b3b3b3;
+    --highlight: #be3144;
+    --border: #2a2a2a;
+    --hover: #9c2533;
+    --background-alt: #181818;
     --border-radius: 5px;
-    --font-size-m: 16;
+    --font-size-m: 16px;
 }
 
-ul {
-    list-style: none;
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), 
+                      url(images/editing_timeline.jpg);
+    background-position: -400px center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    z-index: 0;
 }
 
-a {
-    text-decoration: none;
+/* About Me Section Styles */
+.hero .about-me {
+    position: sticky;
+    top: 100px;
+    z-index: 2;
+    width: 65%;
+    max-width: 1200px;
+    font-size: 30px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    margin-right: 45%;
 }
 
-button {
-    cursor: pointer;
-    border: none;
-    background: none;
-}
-
-.bg {
+/* Right Image Layer Styles */
+.right-image-layer {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 40%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), 
+                      url(images/carter_ally.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 0;
+    transform: scaleX(-1);
 }
-/* navbar style*/
 
-header .navbar {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+/* Navbar Styles */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    backdrop-filter: blur(3px);
-}
-
-.navbar .nav-logo .logo-text {
-    color: var(--text-primary);
-}
-
-.navbar .nav-menu {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.navbar .nav-menu .nav-link {
-    padding: 5px;
-    color: var(--text-primary);
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-m);
-    transition: 0.3s ease;
-}
-
-.navbar .nav-menu .nav-link:hover {
-    padding: 5px;
-    color: var(--primary);
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-m);
-}
-
-.bg {
-    width: 100%;
-    background: url("images/binary_bg_4k.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.about-data {
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    transform: translate(-30%, -10%);
-    max-width: 50ch;
-    text-align: left;
-    color: var(--text-primary);
-    font-size: 30px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.about-pic {
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-shadow: 0 0 10px var(--text-primary), 0 0 20px var(--text-primary);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--background-alt);
+    color: var(--text-primary);
+    text-align: center;
+    padding: 20px;
+    font-size: var(--font-size-m);
     position: relative;
-    scale: 25%;
-    transform: translate(0%, -140%);
-    z-index: 2;
-    object-fit: cover;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
