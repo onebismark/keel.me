@@ -20,7 +20,6 @@
     font-family: "tahoma", sans-serif;
 }
 
-/* Color and Size Variables */
 :root {
     --first-color: #d3d6db;
     --first-light: #e0e4e9;
@@ -48,112 +47,127 @@
     --font-size-m: 16px;
 }
 
-/* Hero Section Styles */
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), 
-                      url(images/editing_timeline.jpg);
-    background-position: -400px center;
-    background-size: cover;
-    padding: 10px 10%;
-    overflow: hidden;
-    z-index: 0;
+.main-images img {
+    position: relative;
+    width: 100%; /* Make images span the full width of the screen */
+    height: 50vh; /* Make images span the full height of the viewport */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the area */
 }
 
-/* About Me Section Styles */
-.hero .about-me {
-    position: sticky;
-    top: 100px;
-    z-index: 2;
-    width: 65%;
-    max-width: 1200px;
-    font-size: 30px;
-    line-height: 1.6;
-    color: var(--text-primary);
-    text-align: left;
-    padding: 20px 20px 20px 20px;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
-    margin: auto;
-    margin-right: 45%;
+.top-div {
+    position: absolute;
+    right: 0; /* Align the image to the right */
+    transform: translateX(0); /* Remove horizontal centering */
+    width: 35%; /* Ensure the image spans the full width */
+    max-width: 100%; /* Prevent cropping */
+    overflow: hidden; /* Hide any overflow */
+    top: 0; /* Ensure it stays at the top */
 }
 
-/* Right Image Layer Styles */
-.right-image-layer {
+.middle-div {
+    position: absolute;
+    left: 50%; /* Align horizontally to the center */
+    transform: translateX(-50%); /* Adjust for the element's own width */
+    width: 35%; /* Ensure the image spans the full width */
+    max-width: 100%; /* Prevent cropping */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.bottom-div {
+    position: absolute;
+    left: 15%;
+    transform: translateX(-50%); /* Adjust for the element's own width */
+    width: 35%; /* Ensure the image spans the full width */
+    max-width: 100%; /* Prevent cropping */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.image-gradient {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)); /* Corrected gradient syntax */
     position: absolute;
     top: 0;
-    right: 0;
-    width: 40%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), 
-                      url(images/carter_ally.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    pointer-events: none;
-    z-index: 0;
-    transform: scaleX(-1);
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: 1; 
 }
 
-/* Navbar Styles */
-nav {
-    position: sticky;
+.navbar {
+    position: fixed;
     top: 0;
-    z-index: 3;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 15px;
-    text-decoration: none;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
     color: var(--text-primary);
+    z-index: 10; /* Ensure it stays above other elements */
+    padding: 1rem 2rem;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    transition: text-shadow 0.3s ease;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li a:hover {
-    text-shadow: 0 0 10px var(--text-primary), 0 0 20px var(--text-primary);
-}
 
-/* Footer Styles */
-.footer {
-    background-color: var(--background-alt);
+
+.half-vh {
+    height: 50vh; /* Takes up 50% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-alt); /* Optional background color */
     color: var(--text-primary);
     text-align: center;
-    padding: 20px;
-    font-size: var(--font-size-m);
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-.footer a {
+.about-me-gradient {
+    height: 50vh; /* Takes up 50% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, var(--primary), var(--background-alt)); /* Radial gradient */
     color: var(--text-primary);
-    text-decoration: none;
+    text-align: center;
 }
 
-.footer a:hover {
-    text-decoration: underline;
+.about-me {
+    padding: 40px 300px; /* Add padding around the text */
+    font-size: 39px;
+    text-align: justify;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-me {
+        font-size: 24px; /* Smaller font size for tablets */
+        padding: 30px 200px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 700px) {
+    .about-me {
+        font-size: 24px; /* Smaller font size for mobile devices */
+        padding: 10px 75px; /* Adjust padding */
+    }
+}
+
+.previous-works-gradient {
+    height: 50vh; /* Takes up 50% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, var(--fourth-light), var(--fourth-dark)); /* Radial gradient */
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.previous-works-image {
+    gap: 70px;
+    border-radius: 50%;
+    
 }
