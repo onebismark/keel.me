@@ -126,33 +126,33 @@
 
 .about-me-gradient {
     height: 50vh; /* Takes up 50% of the viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 10px 10px;
     background: radial-gradient(circle, var(--primary), var(--background-alt)); /* Radial gradient */
     color: var(--text-primary);
     text-align: center;
 }
 
 .about-me {
-    padding: 40px 300px; /* Add padding around the text */
-    font-size: 39px;
-    text-align: justify;
+    max-width: 50%; /* Restrict the width of the text */
+    font-size: 35px;
+    text-align: left;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+    margin: 0; /* Remove unnecessary margin */
+    background: rgba(24, 24, 24, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur for frosted glass effect */
+    border-radius: 15px; /* Add rounded corners */
+    padding: 20px; /* Add padding inside the box */
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.6); /* Optional: Add a shadow for depth */
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
     .about-me {
-        font-size: 24px; /* Smaller font size for tablets */
-        padding: 30px 200px; /* Adjust padding */
-    }
-}
-
-@media (max-width: 700px) {
-    .about-me {
+        max-width: 80%;
         font-size: 24px; /* Smaller font size for mobile devices */
-        padding: 10px 75px; /* Adjust padding */
+        padding: 10px 30px; /* Adjust padding */
     }
 }
 
@@ -164,10 +164,54 @@
     background: radial-gradient(circle, var(--fourth-light), var(--fourth-dark)); /* Radial gradient */
     color: var(--text-primary);
     text-align: center;
+    overflow: hidden;
+}
+
+.previous-works-images ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-weight: bold;
+    text-shadow: 0 0px 20px rgba(0, 0, 0, 0.6);
+    animation-name: scrollleft;
 }
 
 .previous-works-image {
-    gap: 70px;
     border-radius: 50%;
-    
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.6); /* Optional: Add a shadow for depth */
+    width: 100px; /* Default width */
+    height: 100px; /* Default height */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth scaling */
 }
+
+@media (max-width: 1200px) {
+    .previous-works-image {
+        width: 80px; /* Scale down for smaller screens */
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .previous-works-image {
+        width: 60px; /* Further scale down for mobile devices */
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .previous-works-image {
+        width: 50px; /* Smallest size for very small screens */
+        height: 50px;
+    }
+}
+
+.some-works {
+    font-size: 80px;
+    font-weight: bold;
+    transform: translateY(-60px);
+    text-shadow: 0 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+
