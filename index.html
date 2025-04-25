@@ -1,76 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>keel</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/glasses_small.png">
-</head>
-<body class="main">
-   <section class="main-images">
-        <div class="bottom-div">
-            <img src="images/server_formatted.jpg" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <header class="header">
+
+        <a href="#home" class="logo">
+            Carter <span>Keel</span>
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon" ></i>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="gradient-btn">Contact Me</button>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Carter</span> </h1>
+            <h3>
+                I'm a <span>video editor</span>
+            </h3>
+            <p>Dedicated and detail-oriented with a strong passion for video editing, 
+               bringing creativity and storytelling to life through compelling visual content. 
+               Eager to expand knowledge in cybersecurity and IT, with a focus on server setup and security. 
+               Quick learner with excellent problem-solving skills, 
+               committed to continuous growth in both creative and technical fields.</p>
+
+               <div class="social-icons">
+                    <a href="#">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bx bxl-linkedin-square"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bx bxl-instagram-alt"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+               </div>
+
+               <div class="btn-group">
+                    <a href="#" class="btn">Hire</a>
+                    <a href="#contact" class="btn">Contact</a>
+               </div>
         </div>
-        <div class="middle-div">
-            <img src="images/timeline_formatted.jpg" alt="">
+        <div class="home-image">
+            <img src="images/carter_column.jpg" alt="Carter in front of column">
         </div>
-        <div class="top-div">
-            <img src="images/me_formatted.jpg" alt="">
+    </section>
+    <section class="about" id="about">
+        
+        <div class="about-image">
+            <img src="images/carter_ally.jpg" alt="Carter in an ally">
         </div>
-        <div class="dark-filter">
-            <div class="image-gradient"></div>
+
+        <div class="about-content">
+            <h2>About <span>Me</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Sunt maxime distinctio perspiciatis odio reiciendis harum animi 
+            laborum. Consequatur recusandae officia optio explicabo 
+            exercitationem aut harum, earum labore, 
+            voluptas eius itaque.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
-   </section>
-   <div class="half-vh"></div>
-   <div class="about-me-gradient">
-        <div class="about-me">Carter Keel is a Dedicated and detail-oriented dude with a strong passion for video editing, bringing creativity and storytelling to life through compelling visual content. Eager to expand knowledge in cybersecurity and IT, with a focus on server setup and security. Quick learner with excellent problem-solving skills, committed to continuous growth in both creative and technical fields.</div>
-   </div>
-   <div class="previous-works-gradient">
-        <div class="wrapper">
-            <div class="item item1">
-                <a href="https://www.youtube.com/channel/UC1" target="_blank">
-                    <img class="previous-works-image" src="https://yt3.googleusercontent.com/Oc9YfPtuTz07XW2tPLiPTibM3SU4GpZTrCHL0RXj6Fn_184zYkz7FDDVQ8lDIBnc7Btqost0wbw=s160-c-k-c0x00ffffff-no-rj" alt="Random But Cool logo">
-                </a>
-                <p>My Channel</p>
-            </div>
-            <div class="item item2">
-                <a href="https://www.youtube.com/channel/UC2" target="_blank">
-                    <img class="previous-works-image" src="https://yt3.googleusercontent.com/FD4kFm2vCWk6BGNINxlqInjeIldHG8G99LUJZsvyqm8YGrP04PbaQ8KvrfOaiuNnlfk7UDIdPg=s160-c-k-c0x00ffffff-no-rj" alt="Nerd Cave logo">
-                </a>
-                <p>Nerd Cave</p>
-            </div>
-            <div class="item item3">
-                <a href="https://www.youtube.com/channel/UC3" target="_blank">
-                    <img class="previous-works-image" src="https://yt3.googleusercontent.com/Ff9Eu4r2pAuJUkCZBxu_lS4QZ0vdQVx7GqbScEQbRMEUP1t6k7j6gkAUqnsRFyp_H8PCowIxLg=s160-c-k-c0x00ffffff-no-rj" alt="Bibble Caddie logo">
-                </a>
-                <p>Bible Caddie</p>
-            </div>
-            <div class="item item4">
-                <a href="https://www.youtube.com/channel/UC4" target="_blank">
-                    <img class="previous-works-image" src="https://yt3.googleusercontent.com/HZ34zwPLWWfP6dT9hTL9J7OIK7iBGBfbT0geFo8eikfXOYcyZRmx7fc8EyWu77nyRc67Ea682A=s160-c-k-c0x00ffffff-no-rj" alt="Multiply Church logo">
-                </a>
-                <p>Multiply Church</p>
-            </div>
-            <div class="item item5">
-                <a href="https://www.youtube.com/channel/UC5" target="_blank">
-                    <img class="previous-works-image" src="https://yt3.googleusercontent.com/AUFDzKnawNeVVLeI4UHZILik7p4XMNiYBw49zXAEhisLLY-ieANu4ccydUOwqXGHkrAWM4xXRQ=s160-c-k-c0x00ffffff-no-rj" alt="Dr. Jim Harris logo">
-                </a>
-                <p>Dr. Jim Harris</p>
-            </div>
-            <div class="item item6">
-                <a href="https://www.youtube.com/channel/UC6" target="_blank">
-                    <img class="previous-works-image" src="https://yt3.googleusercontent.com/pxZY99A5UjCBWq-elPHgLJmSPmkICIaSOh-rG6-FjzHaRtSGyDyF3_si5KlGHrDIRJSdg3_t=s160-c-k-c0x00ffffff-no-rj" alt="Common Ground Conversations logo">
-                </a>
-                <p>Common Ground</p>
-            </div>
-            <div class="item item7">
-                <a href="https://www.youtube.com/channel/UC7" target="_blank">
-                    <img class="previous-works-image" src="https://yt3.googleusercontent.com/6HrofkYNjo6xoBi_IWWv9WXYFIzoVQRIP747Z1DY0EYr68Ayfcyk09D75b0g_Zxi2qiDh0Eo7h8=s160-c-k-c0x00ffffff-no-rj" alt="Jason Clark logo">
-                </a>
-                <p>Jason Clark</p>
-            </div>
-        </div>
-   </div>
-</body>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
