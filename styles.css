@@ -10,7 +10,7 @@
     --bg-color: #080808;
     --second-bg-color: #101010;
     --text-color: white;
-    --main-color: #e74c3c;
+    --main-color: #cf2525;
   }
   html {
     font-size: 60%;
@@ -53,7 +53,7 @@
   }
 
   span {
-    background: linear-gradient(270deg, #df8908 10%, #ff1d15 100%);
+    background: linear-gradient(270deg, #ff7878 10%, #ff0800 100%);
     background-clip: text;
     color: transparent;
   }
@@ -69,11 +69,14 @@
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
   }
+  .gradient-btn a {
+    color: var(--text-color);
+  }
   .gradient-btn {
     font-size: 1.8rem;
     padding: 1rem 2rem;
     border-radius: 3rem;
-    background: linear-gradient(270deg, #df8908 10%, #ff1d15 100%);
+    background: linear-gradient(270deg, #ff7878 10%, #ff0800 100%);
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -118,10 +121,13 @@
   }
   .home-image img {
     width: 30vw;
-    border-radius: 15rem;
+    border-radius: 50rem;
     box-shadow: 0 0 25px var(--main-color);
     border: var(--main-color) 2px;
     transition: 0.3s ease-in-out;
+  }
+  .home-image img:first-of-type {
+    border: 10px solid var(--main-color);
   }
   .home-image img:hover {
     box-shadow: 0 0 25px var(--main-color),
@@ -187,10 +193,13 @@
     background-color: var(--second-bg-color);
   }
   .about-image img {
-    width: 20vw;
+    width: 30vw;
     border-radius: 5rem;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.3s ease-in-out;
+  }
+  .about-image img:first-of-type {
+    border: 10px solid var(--main-color);
   }
   .about-image img:hover {
     box-shadow: 0 0 25px var(--main-color),
