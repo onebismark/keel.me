@@ -11,6 +11,8 @@
     --second-bg-color: #101010;
     --text-color: white;
     --main-color: #cf2525;
+    --gradient-start: #d61717;
+    --gradient-end: #e711a7;
   }
   html {
     font-size: 60%;
@@ -53,7 +55,7 @@
   }
 
   span {
-    background: linear-gradient(270deg, #ff7878 10%, #ff0800 100%);
+    background: linear-gradient(270deg, var(--gradient-start) 10%, var(--gradient-end) 100%);
     background-clip: text;
     color: transparent;
   }
@@ -76,7 +78,7 @@
     font-size: 1.8rem;
     padding: 1rem 2rem;
     border-radius: 3rem;
-    background: linear-gradient(270deg, #ff7878 10%, #ff0800 100%);
+    background: linear-gradient(270deg, var(--gradient-start) 10%, var(--gradient-end) 100%);
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -127,7 +129,7 @@
     transition: 0.3s ease-in-out;
   }
   .home-image img:first-of-type {
-    border: 10px solid var(--main-color);
+    border: 1rem solid var(--main-color);
   }
   .home-image img:hover {
     box-shadow: 0 0 25px var(--main-color),
@@ -199,7 +201,7 @@
     transition: 0.3s ease-in-out;
   }
   .about-image img:first-of-type {
-    border: 10px solid var(--main-color);
+    border: 1rem solid var(--main-color);
   }
   .about-image img:hover {
     box-shadow: 0 0 25px var(--main-color),
@@ -414,5 +416,8 @@
     }
     .about img {
       width: 52vw;
+    }
+    .projects-box {
+      justify-content: center;
     }
   }
