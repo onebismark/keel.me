@@ -13,7 +13,5 @@ No attribution is required, but a shout-out is always appreciated!
 
 ---
 
-> I hope this helps kick-start your own personal or professional site. Happy coding!
-
 — Carter Keel
 
