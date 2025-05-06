@@ -1,4 +1,4 @@
-:root[data-theme="dark"] {
+:root[data-theme="light"] {
   --bg-color: #FFFFFF;
   --second-bg-color: #F5F5F5;
   --text-color: #1A1A1A;
@@ -7,7 +7,7 @@
   --gradient-end: #6cd19f;
 }
 
-:root[data-theme="light"] {
+:root[data-theme="dark"] {
   --bg-color: #080808;
   --second-bg-color: #101010;
   --text-color: white;

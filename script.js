@@ -13,14 +13,14 @@ themeToggle.onclick = () => {
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
 
-    themeToggle.textContent = newTheme === 'dark' ? 'Dark Side' : 'Light Side';
+    themeToggle.textContent = newTheme === 'dark' ? 'Light Side' : 'Dark Side';
 };
 
 window.onload = () => {
     const savedTheme = localStorage.getItem('theme');
-    
-    const defaultTheme = savedTheme || 'dark';
-    document.documentElement.setAttribute('data-theme', defaultTheme);
+    const defaultTheme = 'dark';
+    const themeToApply = savedTheme || defaultTheme;
 
-    themeToggle.textContent = defaultTheme === 'dark' ? 'Dark Side' : 'Light Side';
+    document.documentElement.setAttribute('data-theme', themeToApply);
+    themeToggle.textContent = themeToApply === 'dark' ? 'Light Side' : 'Dark Side';
 };
