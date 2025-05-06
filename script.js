@@ -17,8 +17,10 @@ themeToggle.onclick = () => {
 };
 
 window.onload = () => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+    const savedTheme = localStorage.getItem('theme');
+    
+    const defaultTheme = savedTheme || 'dark';
+    document.documentElement.setAttribute('data-theme', defaultTheme);
 
-    themeToggle.textContent = savedTheme === 'dark' ? 'Dark Side' : 'Light Side';
+    themeToggle.textContent = defaultTheme === 'dark' ? 'Dark Side' : 'Light Side';
 };
