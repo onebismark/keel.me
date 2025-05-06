@@ -90,10 +90,6 @@ html {
     border-bottom: 3px solid var(--main-color);
   }
 
-  #theme-toggle:hover {
-    transform: scale(1.2);
-  }
-
   .theme-toggle {
     font-size: 1.8rem;
     margin-left: 4rem;
@@ -425,7 +421,13 @@ html {
       display: block;
       font-size: 2rem;
       margin: 3rem 0;
-      color: var(--text-color);
+      color: white;
+    }
+    .theme-toggle {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+      color: white;
     }
     .navbar.active{
       display: block;
