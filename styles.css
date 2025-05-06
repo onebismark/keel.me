@@ -90,21 +90,6 @@ html {
     border-bottom: 3px solid var(--main-color);
   }
 
-  .theme-toggle {
-    font-size: 1.8rem;
-    margin-left: 4rem;
-    font-weight: 500;
-    color: var(--text-color);
-    transition: 0.3s ease-in-out;
-    border-bottom: 3px solid transparent;
-    cursor: pointer;
-  }
-
-  .theme-toggle:hover {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
-  }
-
   .gradient-btn a {
     color: var(--text-color);
   }
@@ -122,6 +107,16 @@ html {
   }
   .gradient-btn:hover {
     transform: scale(1.05);
+  }
+
+  .theme-toggle {
+    font-size: 1.8rem;
+    margin-left: 4rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
   }
 
   section {
@@ -418,12 +413,6 @@ html {
       display: none;
     }
     .navbar a{
-      display: block;
-      font-size: 2rem;
-      margin: 3rem 0;
-      color: white;
-    }
-    .theme-toggle {
       display: block;
       font-size: 2rem;
       margin: 3rem 0;
