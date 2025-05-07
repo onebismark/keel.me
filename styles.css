@@ -1,10 +1,10 @@
 :root[data-theme="light"] {
-  --bg-color: #FFFFFF;
-  --second-bg-color: #F5F5F5;
+  --bg-color: #c6f2fd;
+  --second-bg-color: #d4f5ff;
   --text-color: #1A1A1A;
   --main-color: #007ACC;
   --gradient-start: #2285c7;
-  --gradient-end: #6cd19f;
+  --gradient-end: #25dbdb;
 }
 
 :root[data-theme="dark"] {
