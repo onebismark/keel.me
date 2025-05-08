@@ -369,13 +369,12 @@ html {
   .docs {
     background-color: var(--bg-color);
     min-height: 0rem;
-    padding: 10rem 15%;
   }
 
   .docs-items {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     list-style: decimal inside;
     padding: 0;
