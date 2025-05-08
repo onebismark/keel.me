@@ -366,8 +366,42 @@ html {
     font-size: 1.6rem;
   }
 
-  .footer {
+  .docs {
     background-color: var(--bg-color);
+    min-height: 0rem;
+    padding: 10rem 15%;
+  }
+
+  .docs-items {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    list-style: decimal inside;
+    padding: 0;
+  }
+
+  .docs-items li {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+  }
+
+  .docs-items li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .docs-items li a:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+  }
+
+  .footer {
+    background-color: var(--second-bg-color);
   }
   .footer .social-icons {
     text-align: center;
