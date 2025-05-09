@@ -37,4 +37,6 @@ window.onload = () => {
 
     document.documentElement.setAttribute('data-theme', themeToApply);
     themeToggle.textContent = themeToApply === 'dark' ? 'Light Side' : 'Dark Side';
+
+    document.body.style.visibility = 'visible';
 };
