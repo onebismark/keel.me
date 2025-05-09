@@ -31,16 +31,11 @@ themeToggle.onclick = () => {
 };
 
 window.onload = () => {
-    try {
-        const savedTheme = localStorage.getItem('theme');
-        const defaultTheme = 'dark';
-        const themeToApply = savedTheme || defaultTheme;
+    const savedTheme = localStorage.getItem('theme');
+    const defaultTheme = 'dark';
+    const themeToApply = savedTheme || defaultTheme;
 
-        document.documentElement.setAttribute('data-theme', themeToApply);
-        themeToggle.textContent = themeToApply === 'dark' ? 'Light Side' : 'Dark Side';
-    } catch (error) {
-        console.error('Error applying theme:', error);
-    } finally {
-        document.body.style.visibility = 'visible';
-    }
+    document.documentElement.setAttribute('data-theme', themeToApply);
+    themeToggle.textContent = themeToApply === 'dark' ? 'Light Side' : 'Dark Side';
+ 
 };
