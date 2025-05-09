@@ -369,6 +369,7 @@ html {
   .docs {
     background-color: var(--bg-color);
     min-height: 0rem;
+    overflow: hidden;
   }
 
   .docs-items {
@@ -486,10 +487,6 @@ html {
       justify-content: center;
     }
     .docs-items {
-      padding-left: 0;
-      list-style-position: outside;
-    }
-    .docs-box {
-      padding: 0 2rem;
+      list-style-position: center;
     }
   }
