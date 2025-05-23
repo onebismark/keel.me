@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background:#000;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,8 +14,29 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="images/website_glasses.png" />
+
+    <style>
+      /* Only fade overlay, do not set html/body background here */
+      #page-fade {
+        position: fixed;
+        z-index: 2000;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        /* Use CSS variable for background color */
+        background: var(--bg-color, #000);
+        opacity: 1;
+        pointer-events: none;
+        transition: opacity 1.5s ease;
+      }
+      #page-fade.fade-out {
+        opacity: 0;
+      }
+    </style>
+
   </head>
   <body>
+    <div id="page-fade"></div>
 
     <header class="header">
 
@@ -30,7 +51,7 @@
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
-            <a href="#docs">Docs</a>
+            <a href="https://docs.keel.me" target="_blank">Docs</a>
             <a href="docs/carter_resume.pdf" target="_blank">Resume</a>
             <a id="theme-toggle" class="theme-toggle">Light Side</a>
         </nav>
@@ -204,7 +225,7 @@
         </div>
     </section>
 
-    <section class="docs" id="docs">
+    <!-- <section class="docs" id="docs">
         <h2 class="heading">Docs</h2>
         <div class="docs-box">
             <ol class="docs-items">
@@ -218,30 +239,42 @@
 
             </ol>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
-        <div class="social-icons">
-            <a href="https://github.com/carterkeel" target="_blank">
-                <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/carterkeel/" target="_blank">
-                <i class="bx bxl-linkedin-square"></i>
-            </a>
-            <a href="https://www.instagram.com/carterbkeel/" target="_blank">
-                <i class="bx bxl-instagram-alt"></i>
-            </a>
-            <a href="https://x.com/carterbkeel" target="_blank">
-                <i class="bx bxl-twitter"></i>
-            </a>
-       </div>
-       <ul class="list">
-            <li>
-                <a href="#contact" id="contact">email me: contact@keel.me</a>
-            </li>
-       </ul>
-    </footer>
+            <div class="social-icons">
+                <a href="https://github.com/carterkeel" target="_blank">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/carterkeel/" target="_blank">
+                    <i class="bx bxl-linkedin-square"></i>
+                </a>
+                <a href="https://www.instagram.com/carterbkeel/" target="_blank">
+                    <i class="bx bxl-instagram-alt"></i>
+                </a>
+                <a href="https://x.com/carterbkeel" target="_blank">
+                    <i class="bx bxl-twitter"></i>
+                </a>
+           </div>
+           <ul class="list">
+                <li>
+                    <a href="#contact" id="contact">email me: contact@keel.me</a>
+                </li>
+           </ul>
+        </footer>
+        <script src="script.js"></script>
 
-    <script src="script.js"></script>
-  </body>
-</html>
+        <script>
+          // Fade out the black overlay after 1.5s
+          document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+              document.getElementById('page-fade').classList.add('fade-out');
+            }, 100); // Start fade after short delay for smoothness
+            setTimeout(function() {
+              document.getElementById('page-fade').style.display = 'none';
+            }, 1000); // Remove after fade duration
+          });
+        </script>
+
+      </body>
+    </html>
