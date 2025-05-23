@@ -39,3 +39,12 @@ window.onload = () => {
     themeToggle.textContent = themeToApply === 'dark' ? 'Light Side' : 'Dark Side';
  
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+              document.getElementById('page-fade').classList.add('fade-out');
+            }, 100); // Start fade after short delay for smoothness
+            setTimeout(function() {
+              document.getElementById('page-fade').style.display = 'none';
+            }, 1200); // Remove after fade duration
+          });

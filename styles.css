@@ -497,6 +497,7 @@ html {
   inset: 0;
   width: 100vw;
   height: 100vh;
+  background: var(--bg-color, #000);
   opacity: 1;
   pointer-events: none;
   transition: opacity 1.5s ease;
