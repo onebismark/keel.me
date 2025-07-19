@@ -10,7 +10,12 @@ lightModeSound.volume = 0.25;
 darkModeSound.volume = 0.25;
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
+    // Fade out current icon
+    menuIcon.classList.add('fade');
+    setTimeout(() => {
+        menuIcon.classList.toggle('bx-x');
+        menuIcon.classList.remove('fade');
+    }, 300); // Match CSS transition duration
     navbar.classList.toggle('active');
     clickSound.play();
 };
