@@ -13,5 +13,5 @@ No attribution is required, but a shout-out is always appreciated!
 
 ---
 
-— Carter Keel
+— Lord Bismark
 
